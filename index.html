@@ -10,19 +10,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="">
-        <label for="FirstName">First Name</label>
-        <input type="text" name="FirstName" id="FirstName">
-        <label for="LastName">Last Name</label>
-        <input type="text" name="LastName" id="LastName">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="phone">Phone Number</label>
-        <input type="tel" name="phone" id="phone">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <label for="confirmPass">Confirm Password</label>
-        <input type="confirmPass" name="confirmPass" id="confirmPass">
-    </form>
+    <div id="leftwardBackground">
+        <img src="Background.jpeg" alt="People filling out forms">
+        <img src="JonesWorks Transparent.png" alt="JonesWorks logo">
+    </div>
+    <div id="intro">
+        <p>Check out this neat form! You should definitely fill it out
+            and give me your information.</p>
+    </div>
+    <p>The fun starts here.</p>
+    <div id="center">
+        <form action="">
+            <label for="FirstName">First Name</label>
+            <input type="text" name="FirstName" id="FirstName" required>
+            <label for="LastName">Last Name</label>
+            <input type="text" name="LastName" id="LastName" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <label for="confirmPass">Confirm Password</label>
+            <input type="confirmPass" name="confirmPass" id="confirmPass" required>
+        </form>
+    </div>
+    <div id="bottom">
+        <button>Create Account</button>
+        <p>Already have an account? Log in.</p>
+    </div>
 </body>
 </html>

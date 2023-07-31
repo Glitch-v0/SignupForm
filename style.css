@@ -1,1 +1,5 @@
 body {font-family: 'Merriweather', serif, 'Times New Roman', Times, serif;}
+
+:invalid {
+    border-color: red;
+}
