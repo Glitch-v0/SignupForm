@@ -1,6 +1,6 @@
 :root {
-    --backgroundWidth: 220px;
-    --backgroundHeight: 400px;
+    --backgroundWidth: calc(61.8vw);
+    --backgroundHeight: calc(61.8vh);
     --colorPrimary: #9DCBFF;
     --colorSecondary: #D0E6FF;
     --leftPadding: 10px
@@ -8,9 +8,6 @@
 body {
     font-family: 'Merriweather', serif, 'Times New Roman', Times, serif;
     display: flex;
-
-    height: calc(var(--backgroundHeight)*3);
-    width: calc(var(--backgroundWidth)*2);
     font-size: 10px;
     background-color: #eaf4ff;
 }
@@ -20,51 +17,72 @@ body {
     flex-direction: column;
     gap: 10px;
 }
-:invalid {
-    border-color: red;
+
+#leftwardBackground, #rightWardContent{
+    width: clamp(calc(var(--backgroundWidth)*0.75), var(--backgroundWidth), calc(var(--backgroundWidth)*1.25));
+    height: clamp(calc(var(--backgroundHeight)*0.75), var(--backgroundHeight), calc(var(--backgroundHeight)*1.25));
 }
+
+/*Default form styling */
+input {
+    border: 1px solid #ccc;
+}
+
+/* Valid styling */
+input:valid {
+    border: 2px solid green;
+  }
+  
+
 
 form {
     display: grid;
     grid-auto-rows: auto;
     grid-auto-columns: auto;
-    padding-left: var(--leftPadding);
+    height: 100%;
 }
 
+span {
+    color: red;
+}
 
 #background {
-    width: var(--backgroundWidth);
-    height: var(--backgroundHeight);
+    width: calc(var(--backgroundWidth)*0.7);
+    height: calc(var(--backgroundHeight));
 }
 
 #logo {
-    width: calc(var(--backgroundWidth)*0.8);
-    height: calc(var(--backgroundHeight)*0.1);
+    width: calc(var(--backgroundWidth)*0.5);
+    height: calc(var(--backgroundHeight)*0.075);
     border: 4px solid var(--colorPrimary);
     background-color: rgb(247, 252, 255);
     position: absolute;
-    left: 20px;
-    top: calc(var(--backgroundHeight)*0.5);
+    left: calc(var(--backgroundWidth)*0.11);
+    top: calc(var(--backgroundHeight)*0.45);
 }
 
 #intro {
     background-color: var(--colorSecondary);
-    width: 100%;
-    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
     padding-left: var(--leftPadding);
+    height: 10%;
 }
 
+#center {
+    height: 80%;
+}
 #bottom {
     background-color: var(--colorSecondary);
-    height: calc(var(--backgroundHeight)/3.33);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     padding-left: var(--leftPadding);
-    padding-right: var(--leftPadding);
+    height: 10%;
 }
 
 button {
     background-color: #004699;
     color: #ffffff;
+}
+
+#intro, #center, #bottom {
+
 }
