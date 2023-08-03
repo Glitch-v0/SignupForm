@@ -8,6 +8,7 @@
 body {
     font-family: 'Merriweather', serif, 'Times New Roman', Times, serif;
     display: flex;
+    gap: 10px;
     font-size: 10px;
     background-color: #eaf4ff;
 }
@@ -19,8 +20,9 @@ body {
 }
 
 #leftwardBackground, #rightWardContent{
-    width: clamp(calc(var(--backgroundWidth)*0.75), var(--backgroundWidth), calc(var(--backgroundWidth)*1.25));
-    height: clamp(calc(var(--backgroundHeight)*0.75), var(--backgroundHeight), calc(var(--backgroundHeight)*1.25));
+    width: clamp(calc(var(--backgroundWidth)*0.5), calc(var(--backgroundWidth)*0.75), calc(var(--backgroundWidth)*1));
+    height: clamp(calc(var(--backgroundHeight)*0.5), calc(var(--backgroundHeight)*0.75), calc(var(--backgroundHeight)*1));
+    background-color: red;
 }
 
 /*Default form styling */
@@ -47,8 +49,8 @@ span {
 }
 
 #background {
-    width: calc(var(--backgroundWidth)*0.7);
-    height: calc(var(--backgroundHeight));
+    width: calc(var(--backgroundWidth)*0.75);
+    height: calc(var(--backgroundHeight)*0.75);
 }
 
 #logo {
@@ -58,7 +60,7 @@ span {
     background-color: rgb(247, 252, 255);
     position: absolute;
     left: calc(var(--backgroundWidth)*0.11);
-    top: calc(var(--backgroundHeight)*0.45);
+    top: calc(var(--backgroundHeight)*0.35);
 }
 
 #intro {
@@ -83,6 +85,6 @@ button {
     color: #ffffff;
 }
 
-#intro, #center, #bottom {
-
+#email {
+    height: 100%;
 }
